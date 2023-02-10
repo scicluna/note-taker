@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
-app.use("/api", notesapi)
 app.use("/notes", notes)
+app.use("/api", notesapi)
 
 
 app.listen(PORT)
