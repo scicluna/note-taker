@@ -21,7 +21,7 @@ router.post('/notes', (req, res) => {
 
     dbjson.push(newNote)
 
-    fs.writeFile("../db/db.json", JSON.stringify(dbjson, null, 4), (err)=>{
+    fs.writeFile("./db/db.json", JSON.stringify(dbjson, null, 4), (err)=>{
         if (err) throw err
        })
 
@@ -42,7 +42,7 @@ router.delete('/notes/:id', (req, res) => {
 
     dbjson.splice(deleteIndex, 1)
     
-    fs.writeFile("../db/db.json", JSON.stringify(dbjson, null, 4), (err)=>{
+    fs.writeFile("./db/db.json", JSON.stringify(dbjson, null, 4), (err)=>{
         if (err) throw err
        })
 
