@@ -1,15 +1,16 @@
 const express = require("express")
 const router = express.Router()
-let dbjson = require("../db/db.json")
+const dbjson = require("../db/db.json")
 const fs = require("fs")
 const { v4: uuidv4 } = require('uuid');
 
 //get dbjson
 router.get('/notes', (req, res) => { 
+    console.log("Note Get")
     res.json(dbjson)
 })
 
-//post notes and append them to the db file
+//post notes and update db file
 router.post('/notes', (req, res) => {
 
     const newNote = {
@@ -17,15 +18,14 @@ router.post('/notes', (req, res) => {
         title: req.body.title,
         text: req.body.text
     }
-    const newDb = [newNote, ...dbjson]
 
-    fs.writeFile("../Develop/db/db.json", JSON.stringify(newDb, null, 4), (err)=>{
+    dbjson.push(newNote)
+
+    fs.writeFile("../Develop/db/db.json", JSON.stringify(dbjson, null, 4), (err)=>{
         if (err) throw err
        })
 
-    dbjson = newDb
-
-    console.log("Post Added")
+    console.log("Note Posted")
     res.send(dbjson)
 })
 
@@ -46,8 +46,8 @@ router.delete('/notes/:id', (req, res) => {
         if (err) throw err
        })
 
-    console.log("Post Deleted")
-    res.send("Note Deleted")
+    console.log("Note Deleted")
+    res.send(dbjson)
 })
 
 module.exports = router
