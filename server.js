@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const notes = require("./routes/notes")
-const notesapi = require("./routes/apinotes")
+const apinotes = require("./routes/apinotes")
 const PORT = process.env.PORT || 3001;
 
 app.use(express.static('public'))
@@ -13,7 +13,8 @@ app.get('/', (req, res) => {
 })
 
 app.use("/notes", notes)
-app.use("/api", notesapi)
+app.use("/api", apinotes)
 
-
-app.listen(PORT)
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+);

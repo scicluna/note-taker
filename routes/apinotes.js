@@ -13,12 +13,13 @@ router.get('/notes', (req, res) => {
 //post notes and update db file
 router.post('/notes', (req, res) => {
 
+    const { title, text } = req.body
+
     const newNote = {
         id: uuidv4(),
-        title: req.body.title,
-        text: req.body.text
+        title,
+        text
     }
-
     dbjson.push(newNote)
 
     fs.writeFile("./db/db.json", JSON.stringify(dbjson, null, 4), (err)=>{
