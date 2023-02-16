@@ -4,7 +4,8 @@
 
 ## Description
 
-This project lets you take notes and saves it to a backend-server via heroku
+This project lets you take notes and saves it to a backend-server via heroku.
+Enjoy! https://young-citadel-67570.herokuapp.com/notes
 
 ## Table of Contents
 
