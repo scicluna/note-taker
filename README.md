@@ -1,18 +1,38 @@
-GIVEN a note-taking application
-WHEN I open the Note Taker - DONE
-THEN I am presented with a landing page with a link to a notes page - DONE
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-WHEN I click on the link to the notes page - DONE
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column - DONE
+# Note Taker
 
-WHEN I enter a new note title and the note’s text - DONE
-THEN a Save icon appears in the navigation at the top of the page - DONE
+## Description
 
-WHEN I click on the Save icon - DONE
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes - DONE
+This project lets you take notes and saves it to a backend-server via heroku
 
-WHEN I click on an existing note in the list in the left-hand column - DONE
-THEN that note appears in the right-hand column - DONE
+## Table of Contents
 
-WHEN I click on the Write icon in the navigation at the top of the page - DONE
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column - DONE
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Questions](#questions)
+
+## Installation
+
+Just follow the heroku link and enjoy! Or enjoy on your own localhost by downloading the files, running npm i, and using node server.js.
+
+## Usage
+
+Keep track of all of your notes with this easy-to-use app!
+![](./public/assets/img/example.png)
+
+## License
+
+This application is covered under the MIT license. Read more at [License: MIT](https://opensource.org/licenses/MIT)
+
+## Contributions
+
+Just email me at sciclunajl@gmail.com with ideas or opportunities
+
+## Questions
+
+1. Where can I find your github so that I can view your other projects? https://github.com/scicluna
+
+2. What email address should I use to contact you regarding further opportunities or questions? sciclunajl@gmail.com
